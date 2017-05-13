@@ -1,0 +1,65 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome To Play") {
+
+<p>
+
+</p>
+<script src='@routes.Assets.versioned("js/index.js")' type='text/javascript'></script>
+
+<ul id="persons"></ul>
+
+<center>
+
+    <h1 style="color:brown;">A Sample Play CRUD Application In Scala By Abida Shaik</h1>
+
+    <hr>
+
+    <h2 style="color:blue;">Create a Person Record in Database</h2>
+<form action="@routes.HomeController.addPerson()" method="post">
+
+    <input name="name" type="text">
+    <button>Add Person</button>
+
+</form>
+
+    <h2 style="color:blue;">Read All Records in Database</h2>
+
+<form action="@routes.HomeController.listPersons()" method="get">
+
+    <button>List Persons</button>
+
+</form>
+
+    <h2 style="color:blue;">Update a Person's name Eg: Rob Renamed to Bob</h2>
+
+
+<form action="@routes.HomeController.updatePerson()" method="post">
+
+    <input name="name" type="text">
+    <input name="update" type="text">
+    <button>Update Person</button>
+
+</form>
+
+    <h2 style="color:blue;">Delete a Person's Records from Database</h2>
+
+<form action="@routes.HomeController.deletePerson()" method="post">
+
+    <input name="name" type="text">
+    <button>Delete Person</button>
+
+</form>
+
+</center>
+
+}
