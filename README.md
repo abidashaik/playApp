@@ -1,8 +1,8 @@
 # Heroku - Play - CRUD App
 
-This simple application demonstrates a Play CRUD App on Heroku free instance using H2. I have noted that NoSQL databases available as Heroku add-on elements though free, require user identification is done via valid credit cards. I have avoided providing my credit card number, so I havent put a NoSQL example that I would have loved to get done using a NoSQL database.
+This simple application demonstrates a Play CRUD App on Heroku free instance using H2. I have noted that NoSQL databases available as Heroku add-on elements though free, require user identification is done via valid credit cards. I have avoided providing my credit card number, so I havent put a NoSQL example that I would have loved to get done using a NoSQL database. Logically though, adding a NoSQL application would be on the same lines.
 
-But it is very simple to replace the 'h2' database with NoSQL database by changing the JDBC link, for example: by adding a simple Redis, Cassandra etc. The SORM framework used in this application wouldnt change as SORM frame work masks the database from the user.
+To add a NoSQL support in the application for example: Cassandra, we would use https://github.com/outworkers/phantom framework.
 
 A sample application on Heroku is at: https://secure-lowlands-84347.herokuapp.com/
 
